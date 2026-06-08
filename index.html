@@ -11,22 +11,15 @@
 </head>
 <body>
 
-  <!-- ========== LOADING SCREEN ========== -->
+  <!-- LOADER -->
   <div class="loader" id="loader">
     <div class="loader__lottie" id="lottieLoader"></div>
-    <p class="loader__text" id="loaderText">جاري التحميل<span class="dots"></span></p>
+    <p class="loader__text">جاري التحميل<span class="dots"></span></p>
   </div>
 
-  <!-- ========== HERO VIDEO ========== -->
+  <!-- HERO VIDEO -->
   <section class="hero" id="hero">
-    <video
-      class="hero__video"
-      src="video.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-    ></video>
+    <video class="hero__video" id="heroVideo" src="video.mp4" autoplay muted loop playsinline preload="auto"></video>
     <div class="hero__overlay"></div>
     <div class="hero__scroll-hint">
       <span></span>
@@ -34,11 +27,13 @@
     </div>
   </section>
 
-  <!-- ========== ROCK NAME ========== -->
+  <!-- ROCK NAME -->
   <section class="name-section" id="name-section">
     <div class="name-section__bg-grid"></div>
+    <div class="name-bg-fly">
+      <img src="bg-fly.jpg" alt="" class="name-bg-fly__img" />
+    </div>
     <div class="dust-container" id="dustContainer"></div>
-
     <div class="rock-name-wrapper" id="rockWrapper">
       <h1 class="rock-name" id="rockName">
         <span class="rock-letter">A</span><span class="rock-letter">H</span><span class="rock-letter">M</span><span class="rock-letter">E</span><span class="rock-letter">D</span>
@@ -47,28 +42,156 @@
       </h1>
       <div class="crack-line" id="crackLine"></div>
     </div>
-
     <div class="bio-wrapper" id="bioWrapper">
-      <div class="bio-tag" id="bioTag1">
-        <span class="tag-icon">⚡</span>
-        <span>Flutter Developer بطموح</span>
+      <div class="bio-tag" id="bioTag1"><span class="tag-icon">⚡</span><span>Flutter Developer بطموح</span></div>
+      <div class="bio-tag" id="bioTag2"><span class="tag-icon">🎂</span><span>١٧ سنة — علمى رياض</span></div>
+      <div class="bio-tag" id="bioTag3"><span class="tag-icon">🚀</span><span>بشتغل عشان يوم أبقى ديفيلوبر يعمل حاجة تتحكى</span></div>
+    </div>
+  </section>
+
+  <!-- GOKU GREETING -->
+  <section class="goku-section" id="gokuSection">
+    <div class="goku-section__bg"></div>
+    <div class="goku-content">
+      <div class="goku-img-wrap" id="gokuImg">
+        <img src="goku.png" alt="Goku" class="goku-img" />
+        <div class="goku-aura"></div>
       </div>
-      <div class="bio-tag" id="bioTag2">
-        <span class="tag-icon">🎂</span>
-        <span>١٧ سنة — علمى رياض</span>
-      </div>
-      <div class="bio-tag" id="bioTag3">
-        <span class="tag-icon">🚀</span>
-        <span>بشتغل عشان يوم أبقى ديفيلوبر يعمل حاجة تتحكى</span>
+      <div class="goku-text" id="gokuText">
+        <div class="section-label">WELCOME</div>
+        <h2 class="goku-title">أهلاً يا بطل! <span class="wave">👋</span></h2>
+        <p class="goku-para">
+          زي ما Goku مكنش أقوى واحد من البداية —
+          أنا كمان باتعلم كل يوم وبتطور. الفرق إن عنده Saiyan blood
+          وأنا عندي <span class="highlight">Flutter</span> 😤
+        </p>
+        <p class="goku-para">
+          بؤمن إن الإصرار يكسر أي حاجة — وزي ما Goku مستنيش حد يديه قوته،
+          أنا كمان بانى مستقبلي بإيدي.
+        </p>
+        <div class="goku-quote">
+          <span>"</span>أنا مش هوقف أتعلم لحد ما أبقى الأحسن<span>"</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SKILLS ========== -->
+  <!-- FLUTTER ROADMAP -->
+  <section class="roadmap-section" id="roadmapSection">
+    <div class="roadmap-goku-bg">
+      <img src="bg-energy.jpg" alt="" class="roadmap-goku-bg__img" />
+    </div>
+    <div class="section-label">THE PLAN</div>
+    <h2 class="section-title">خطتي لـ Flutter 📋</h2>
+    <p class="roadmap-sub">باذن الله الخطة دي هتوصلني لأحلامي — خطوة خطوة</p>
+    <div class="timeline">
+      <div class="timeline-item done" data-index="0">
+        <div class="timeline-dot"><span>✓</span></div>
+        <div class="timeline-card">
+          <span class="tl-status done-badge">أتعلمت ✅</span>
+          <h3>Dart Language</h3>
+          <p>أساسيات Dart — Variables, OOP, Functions, Async/Await</p>
+        </div>
+      </div>
+      <div class="timeline-item done" data-index="1">
+        <div class="timeline-dot"><span>✓</span></div>
+        <div class="timeline-card">
+          <span class="tl-status done-badge">أتعلمت ✅</span>
+          <h3>Flutter Basics</h3>
+          <p>Widgets، Layouts، Navigation، StatefulWidget</p>
+        </div>
+      </div>
+      <div class="timeline-item active" data-index="2">
+        <div class="timeline-dot"><span>🔥</span></div>
+        <div class="timeline-card">
+          <span class="tl-status active-badge">شغال دلوقتي 🔄</span>
+          <h3>State Management</h3>
+          <p>Riverpod / Bloc — بتعلم إزاي أتحكم في حالة التطبيق صح</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-index="3">
+        <div class="timeline-dot"><span>4</span></div>
+        <div class="timeline-card">
+          <span class="tl-status future-badge">قريباً 🎯</span>
+          <h3>Firebase & APIs</h3>
+          <p>Auth، Firestore، REST APIs — ربط التطبيقات بـ Backend حقيقي</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-index="4">
+        <div class="timeline-dot"><span>5</span></div>
+        <div class="timeline-card">
+          <span class="tl-status future-badge">قريباً 🎯</span>
+          <h3>نشر أول تطبيق</h3>
+          <p>رفع تطبيق حقيقي على Play Store وApp Store</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-index="5">
+        <div class="timeline-dot"><span>🏆</span></div>
+        <div class="timeline-card">
+          <span class="tl-status dream-badge">الحلم 🌟</span>
+          <h3>Senior Flutter Developer</h3>
+          <p>أشتغل في شركة كبيرة وأبني تطبيقات بيستخدمها ملايين</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DREAM COMPANIES -->
+  <section class="dreams-section" id="dreamsSection">
+    <div class="section-label">BIG DREAMS</div>
+    <h2 class="section-title">حلمي أشتغل هنا 🏢</h2>
+    <p class="dreams-sub">دي الشركات اللي بحلم يوم أبقى جزء منها</p>
+    <div class="dreams-grid">
+      <div class="dream-card" data-index="0">
+        <div class="dream-icon">🟦</div>
+        <h3>Google</h3>
+        <p>الشركة اللي صنعت Flutter نفسه — ده أكبر حلم</p>
+        <div class="dream-card__line"></div>
+      </div>
+      <div class="dream-card" data-index="1">
+        <div class="dream-icon">🎵</div>
+        <h3>Spotify</h3>
+        <p>شركة بتبني تجارب مستخدم تغير حياة الناس</p>
+        <div class="dream-card__line"></div>
+      </div>
+      <div class="dream-card" data-index="2">
+        <div class="dream-icon">🛒</div>
+        <h3>Noon / Talabat</h3>
+        <p>الشركات الكبيرة في منطقتنا العربية — قريبة وأكبر</p>
+        <div class="dream-card__line"></div>
+      </div>
+      <div class="dream-card" data-index="3">
+        <div class="dream-icon">💼</div>
+        <h3>Startup خاص بيا</h3>
+        <p>في يوم من الأيام — شركتي أنا، بفريقي أنا</p>
+        <div class="dream-card__line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAVORITES -->
+  <section class="fav-section" id="favSection">
+    <div class="section-label">MY WORLD</div>
+    <h2 class="section-title">مجالاتي المفضلة ❤️</h2>
+    <div class="fav-grid">
+      <div class="fav-item" data-index="0"><span class="fav-emoji">📱</span><span class="fav-label">Mobile Development</span></div>
+      <div class="fav-item" data-index="1"><span class="fav-emoji">🎨</span><span class="fav-label">UI Design</span></div>
+      <div class="fav-item" data-index="2"><span class="fav-emoji">🐉</span><span class="fav-label">Dragon Ball Z</span></div>
+      <div class="fav-item" data-index="3"><span class="fav-emoji">🎮</span><span class="fav-label">Gaming</span></div>
+      <div class="fav-item" data-index="4"><span class="fav-emoji">🧠</span><span class="fav-label">Problem Solving</span></div>
+      <div class="fav-item" data-index="5"><span class="fav-emoji">🔥</span><span class="fav-label">Open Source</span></div>
+      <div class="fav-item" data-index="6"><span class="fav-emoji">☕</span><span class="fav-label">Coding at Night</span></div>
+      <div class="fav-item" data-index="7"><span class="fav-emoji">📚</span><span class="fav-label">التعلم المستمر</span></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
   <section class="skills-section" id="skillsSection">
+    <div class="skills-kamehameha-bg">
+      <img src="bg-kamehameha.jpg" alt="" class="skills-kamehameha-bg__img" />
+    </div>
     <div class="section-label">WHAT I DO</div>
     <h2 class="section-title">بعمل إيه؟</h2>
-
     <div class="skills-grid">
       <div class="skill-card" data-index="0">
         <div class="skill-card__icon">📱</div>
@@ -97,41 +220,24 @@
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
+  <!-- ABOUT -->
   <section class="about-section" id="aboutSection">
     <div class="about-content">
       <div class="about-text">
         <div class="section-label">MY STORY</div>
         <h2 class="section-title">قصتي مع الكود</h2>
-        <p class="about-para">
-          اسمي <strong>أحمد سعد</strong>، عندي ١٧ سنة، وبدرس في المدرسة العلمي رياض.
-          من يوم ما اكتشفت Flutter، وأنا بحلم إني أبني تطبيقات تفرق في حياة الناس.
-        </p>
-        <p class="about-para">
-          مش بس بتعلم — أنا بشتغل فعلاً وببني مشاريع حقيقية كل يوم.
-          بؤمن إن السن مش حاجة وقفتني، والكود مش هواية — دا مستقبل.
-        </p>
+        <p class="about-para">اسمي <strong>أحمد سعد</strong>، عندي ١٧ سنة، وبدرس في علمى رياض. من يوم ما اكتشفت Flutter وأنا بحلم إني أبني تطبيقات تفرق في حياة الناس.</p>
+        <p class="about-para">مش بس بتعلم — أنا بشتغل فعلاً وببني مشاريع حقيقية كل يوم. بؤمن إن السن مش حاجة وقفتني، والكود مش هواية — دا مستقبل.</p>
         <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num" data-target="17">0</span>
-            <span class="stat-label">عام</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" data-target="12">0</span>
-            <span class="stat-label">مشروع</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" data-target="100">0</span>
-            <span class="stat-label">% طموح</span>
-          </div>
+          <div class="stat"><span class="stat-num" data-target="17">0</span><span class="stat-label">عام</span></div>
+          <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-label">مشروع</span></div>
+          <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">% طموح</span></div>
         </div>
       </div>
       <div class="about-visual">
         <div class="code-block">
           <div class="code-block__header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
             <span class="code-title">ahmed.dart</span>
           </div>
           <pre class="code-block__body"><code><span class="c-purple">class</span> <span class="c-blue">AhmedSaed</span> <span class="c-purple">extends</span> <span class="c-blue">FlutterDev</span> {
@@ -154,18 +260,13 @@
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
+  <!-- CONTACT -->
   <section class="contact-section" id="contactSection">
     <div class="contact-glow"></div>
     <div class="section-label">LET'S TALK</div>
     <h2 class="section-title">تكلمني على واتساب</h2>
     <p class="contact-sub">عندك مشروع؟ فكرة؟ أو مجرد عايز تتكلم كود؟ — أنا موجود</p>
-    <a
-      class="wa-btn"
-      href="https://wa.me/201090844039"
-      target="_blank"
-      rel="noopener"
-    >
+    <a class="wa-btn" href="https://wa.me/201090844039" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
         <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.851L0 24l6.29-1.503A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.371l-.36-.213-3.732.892.924-3.636-.234-.374A9.818 9.818 0 1112 21.818z"/>
@@ -174,12 +275,11 @@
     </a>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 <span class="footer-name">Ahmed Saed</span> — Crafted with ❤️ & Flutter dreams</p>
+    <p>© 2025 <span class="footer-name">Ahmed Saed</span> — Flutter dreams loading<span class="dots"></span></p>
   </footer>
 
-  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
